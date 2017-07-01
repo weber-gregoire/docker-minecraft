@@ -1,9 +1,10 @@
-Forcked from https://github.com/overshard/docker-minecraft
+Forked from https://github.com/overshard/docker-minecraft
 
 # Docker image
 
 ## For minecraft server 1.12
 ```docker pull gregoireweber/minecraft-server:latest```
+
 ```docker pull gregoireweber/minecraft-server:1.12```
 
 ## For minecraft server 1.11.2
