@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/weber-gregoire/docker-minecraft.svg?branch=master)]
+![Build Status](https://travis-ci.org/weber-gregoire/docker-minecraft.svg?branch=master)
 
 Forked from https://github.com/overshard/docker-minecraft
 
