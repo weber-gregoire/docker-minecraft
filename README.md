@@ -6,6 +6,8 @@ See [original readme][0] for more information.
 
 # Docker image
 
+[Full docker tag list here][1]
+
 ## For minecraft server 1.12
 ```docker pull gregoireweber/minecraft-server:latest```
 
@@ -17,8 +19,8 @@ See [original readme][0] for more information.
 # docker-minecraft
 
 A nice and easy way to get a Minecraft server up and running using docker. For
-help on getting started with docker see the [official getting started guide][1].
-For more information on Minecraft and check out it's [website][2].
+help on getting started with docker see the [official getting started guide][2].
+For more information on Minecraft and check out it's [website][3].
 
 ## Running docker-minecraft
 
@@ -34,5 +36,6 @@ Where
  - ```${EXPOSED_PORT}```is the port from wich you'll be able to reach the server (the default port for minecraft server is ``25565```)
 
 [0]: https://github.com/overshard/docker-minecraft
-[1]: http://www.docker.io/gettingstarted/
-[2]: http://minecraft.net/
+[1]: https://hub.docker.com/r/gregoireweber/minecraft-server/tags/
+[2]: http://www.docker.io/gettingstarted/
+[3]: http://minecraft.net/
