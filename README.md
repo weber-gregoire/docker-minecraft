@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/weber-gregoire/docker-minecraft.svg?branch=master)
+[![Build Status](https://travis-ci.org/weber-gregoire/docker-minecraft.svg?branch=master)][0]
 
 Ligthweight docker image to run a minecraft server with Docker
 
@@ -28,7 +28,7 @@ Once the container is running, you can connect to your serveur using the followi
 
 # Docker Tags
 
-All images are pushed on [dockerhub][0] with `gregoireweber/minecraft-server` name.
+All images are pushed on [dockerhub][1] with `gregoireweber/minecraft-server` name.
 Image tags follow the minecraft server versions.
 
  * `latest` tag will give you the latest stable image
@@ -36,19 +36,20 @@ Image tags follow the minecraft server versions.
  * using minor version will give you the latest image built with that server version (ex: `1.12.2`)
  * usign minor version dash build number will always giveyou the same image (ex: `1.12.2-7`)
 
-The full tag list can be [found here][1]
+The full tag list can be [found here][2]
 
 
 # External Ressources
 
 Forked from https://github.com/overshard/docker-minecraft
-See [original readme][2] for more information.
+See [original readme][3] for more information.
 
-[Minecraft officiel website][3].
-[Docker documentation][4].
+[Minecraft officiel website][4].
+[Docker documentation][5].
 
-[0]: https://hub.docker.com/r/gregoireweber/minecraft-server/
-[1]: https://hub.docker.com/r/gregoireweber/minecraft-server/tags/
-[2]: https://github.com/overshard/docker-minecraft
-[3]: http://minecraft.net/
-[4]: https://docs.docker.com/
+[0]: https://travis-ci.org/weber-gregoire/docker-minecraft
+[1]: https://hub.docker.com/r/gregoireweber/minecraft-server/
+[2]: https://hub.docker.com/r/gregoireweber/minecraft-server/tags/
+[3]: https://github.com/overshard/docker-minecraft
+[4]: http://minecraft.net/
+[5]: https://docs.docker.com/
