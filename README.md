@@ -1,41 +1,54 @@
 ![Build Status](https://travis-ci.org/weber-gregoire/docker-minecraft.svg?branch=master)
 
-Forked from https://github.com/overshard/docker-minecraft
+Ligthweight docker image to run a minecraft server with Docker
 
-See [original readme][0] for more information.
 
-# Docker image
+# Working example
 
-[Full docker tag list here][1]
+Check the `example` folder for a full working example, with documentation.
 
-## For minecraft server 1.12
-```docker pull gregoireweber/minecraft-server:latest```
 
-```docker pull gregoireweber/minecraft-server:1.12```
+# How to use
 
-## For minecraft server 1.11.2
-```docker pull gregoireweber/minecraft-server:1.11.2```
-
-# docker-minecraft
-
-A nice and easy way to get a Minecraft server up and running using docker. For
-help on getting started with docker see the [official getting started guide][2].
-For more information on Minecraft and check out it's [website][3].
-
-## Running docker-minecraft
-
-To run a docker m inecraft usign this image simply type the following command :
-
+You can start a minecraft server simply by typing this command :
 ```
-docker run -d -p 25565:${EXPOSED_PORT} -v ${PATH_TO_YOUR_DATA_FOLDER}:/minecraft/data gregoireweber/minecraft-server:latest
+docker run -d -p 25565:${EXPOSED_PORT} -v ${PATH_TO_DATA_FOLDER}:/minecraft/data gregoireweber/minecraft-server:latest
 ```
 
 Where
 
- - ```${PATH_TO_YOUR_DATA_FOLDER}``` is the absolute path to the folder that will hold the server data (whitelist, bannedip, config, etc...)
- - ```${EXPOSED_PORT}```is the port from wich you'll be able to reach the server (the default port for minecraft server is ``25565```)
+ * `${PATH_TO_DATA_FOLDER}` is the absolute path to the folder that will hold the server data (whitelist, bannedip, config, etc...)
+ * `${EXPOSED_PORT}` is the port from wich you'll be able to reach the server (the default port for minecraft server is `25565`)
 
-[0]: https://github.com/overshard/docker-minecraft
+Once the container is running, you can connect to your serveur using the following address:
+```
+ 127.0.0.1:${EXPOSED_PORT}
+```
+
+
+# Docker Tags
+
+All images are pushed on [dockerhub][0] with `gregoireweber/minecraft-server` name.
+Image tags follow the minecraft server versions.
+
+ * `latest` tag will give you the latest stable image
+ * using major version will give you the latest major version of minecraft server (ex: `1.12`)
+ * using minor version will give you the latest image built with that server version (ex: `1.12.2`)
+ * usign minor version dash build number will always giveyou the same image (ex: `1.12.2-7`)
+
+The full tag list can be [found here][1]
+
+
+# External Ressources
+
+Forked from https://github.com/overshard/docker-minecraft
+See [original readme][2] for more information.
+
+[Minecraft officiel website][3].
+[Docker documentation][4].
+
+[0]: https://hub.docker.com/r/gregoireweber/minecraft-server/
 [1]: https://hub.docker.com/r/gregoireweber/minecraft-server/tags/
-[2]: http://www.docker.io/gettingstarted/
+[2]: https://github.com/overshard/docker-minecraft
 [3]: http://minecraft.net/
+[4]: https://docs.docker.com/
