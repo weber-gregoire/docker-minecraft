@@ -39,6 +39,14 @@ Image tags follow the minecraft server versions.
 The full tag list can be [found here][2]
 
 
+## Troubleshooting
+
+If ypu try to start the container on a  Linux Alpine machine, you might have a memory allocation error on container startup.
+To fix that, run the following on your host:
+```
+sysctl -w kernel.pax.softmode=1
+```
+
 # External Ressources
 
 Forked from https://github.com/overshard/docker-minecraft
