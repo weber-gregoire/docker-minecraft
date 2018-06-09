@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/weber-gregoire/docker-minecraft.svg?branch=master)][0]
+![Travis](https://img.shields.io/travis/weber-gregoire/docker-minecraft.svg)![Docker Pulls](https://img.shields.io/docker/pulls/gregoireweber/minecraft-server.svg)
+
 
 Ligthweight docker image to run a minecraft server with Docker
 
