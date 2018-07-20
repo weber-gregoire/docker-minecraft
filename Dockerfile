@@ -1,8 +1,8 @@
 FROM        alpine:3.6
 MAINTAINER  Grégoire Weber
 
-ENV         MINECRAFT_VERSION 1.12.2
-ENV         MINECRAFT_SERVEUR_URL "https://s3.amazonaws.com/Minecraft.Download/versions/${MINECRAFT_VERSION}/minecraft_server.${MINECRAFT_VERSION}.jar"
+ENV         MINECRAFT_VERSION 1.13
+ENV         MINECRAFT_SERVEUR_URL "https://launcher.mojang.com/mc/game/${MINECRAFT_VERSION}/server/d0caafb8438ebd206f99930cfaecfa6c9a13dca0/server.jar"
 
 VOLUME      /minecraft/data
 WORKDIR     /minecraft
