@@ -2,7 +2,7 @@ sudo: required
 
 env:
   global:
-    - MINECRAFT_SERVER_VERSION=1.13
+    - MINECRAFT_SERVER_VERSION=1.13.2
 
 language: generic
 
