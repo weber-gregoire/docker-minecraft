@@ -1,14 +1,14 @@
-FROM        alpine:3.6
+FROM        openjdk:11.0.5-jre-stretch
 MAINTAINER  Grégoire Weber
 
-ENV         MINECRAFT_VERSION 1.13.2
-ENV         MINECRAFT_SERVEUR_URL "https://launcher.mojang.com/v1/objects/3737db93722a9e39eeada7c27e7aca28b144ffa7/server.jar"
+ENV         MINECRAFT_VERSION 1.14.4
+ENV         MINECRAFT_SERVEUR_URL "https://launcher.mojang.com/v1/objects/3dc3d84a581f14691199cf6831b71ed1296a9fdf/server.jar"
 
 VOLUME      /minecraft/data
 WORKDIR     /minecraft
 EXPOSE      25565
 
-RUN         apk --no-cache --update add openjdk8-jre curl
+RUN         apt-get install -y curl
 
 RUN         curl ${MINECRAFT_SERVEUR_URL} -o ./minecraft_server.${MINECRAFT_VERSION}.jar && \
             chmod +x ./minecraft_server.${MINECRAFT_VERSION}.jar
