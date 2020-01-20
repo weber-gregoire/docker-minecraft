@@ -3,17 +3,17 @@ version: '2'
 services:
   
   minecraft-survival:
-    image: gregoireweber/minecraft-server:latest
+    image: minecraft
     restart: unless-stopped
     volumes:
     - ./survival:/minecraft/data
     ports:
      - "25565:25565"
   
-  minecraft-creative:
-    image: gregoireweber/minecraft-server:latest
-    restart: unless-stopped
-    volumes:
-    - ./creative:/minecraft/data
-    ports:
-     - "25566:25565"
+  # minecraft-creative:
+  #   image: gregoireweber/minecraft-server:latest
+  #   restart: unless-stopped
+  #   volumes:
+  #   - ./creative:/minecraft/data
+  #   ports:
+  #    - "25566:25565"
