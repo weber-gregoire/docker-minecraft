@@ -33,9 +33,9 @@ All images are pushed on [dockerhub][1] with `gregoireweber/minecraft-server` na
 Image tags follow the minecraft server versions.
 
  * `latest` tag will give you the latest stable image
- * using major version will give you the latest major version of minecraft server (ex: `1.12`)
- * using minor version will give you the latest image built with that server version (ex: `1.12.2`)
- * usign minor version dash build number will always giveyou the same image (ex: `1.12.2-7`)
+ * using major version will give you the latest major version of minecraft server (ex: `1.16`)
+ * using minor version will give you the latest image built with that server version (ex: `1.16.1`)
+ * usign minor version dash build number will always give you the same image (ex: `1.16.1-7`)
 
 The full tag list can be [found here][2]
 
