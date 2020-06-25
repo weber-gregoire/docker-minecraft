@@ -13,7 +13,7 @@ services:
 script:
   - docker build -t gregoireweber/minecraft-server:latest .
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" docker.io;
+      echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
       docker tag gregoireweber/minecraft-server:latest gregoireweber/minecraft-server:"$MINECRAFT_SERVER_MAJOR_VERSION";
       docker tag gregoireweber/minecraft-server:latest gregoireweber/minecraft-server:"$MINECRAFT_SERVER_VERSION";
       docker tag gregoireweber/minecraft-server:latest gregoireweber/minecraft-server:"$MINECRAFT_SERVER_VERSION"-"$TRAVIS_BUILD_NUMBER";
