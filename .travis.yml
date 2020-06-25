@@ -2,7 +2,8 @@ sudo: required
 
 env:
   global:
-    - MINECRAFT_SERVER_VERSION=1.15.2
+    - MINECRAFT_SERVER_MAJOR_VERSION=1.16
+    - MINECRAFT_SERVER_VERSION=1.16.1
 
 language: generic
 
@@ -13,9 +14,11 @@ script:
   - docker build -t gregoireweber/minecraft-server:latest .
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
       docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+      docker tag gregoireweber/minecraft-server:latest gregoireweber/minecraft-server:"$MINECRAFT_SERVER_MAJOR_VERSION";
       docker tag gregoireweber/minecraft-server:latest gregoireweber/minecraft-server:"$MINECRAFT_SERVER_VERSION";
       docker tag gregoireweber/minecraft-server:latest gregoireweber/minecraft-server:"$MINECRAFT_SERVER_VERSION"-"$TRAVIS_BUILD_NUMBER";
       docker push gregoireweber/minecraft-server:latest;
+      docker push gregoireweber/minecraft-server:"$MINECRAFT_SERVER_MAJOR_VERSION";
       docker push gregoireweber/minecraft-server:"$MINECRAFT_SERVER_VERSION";
       docker push gregoireweber/minecraft-server:"$MINECRAFT_SERVER_VERSION"-"$TRAVIS_BUILD_NUMBER";
     fi
