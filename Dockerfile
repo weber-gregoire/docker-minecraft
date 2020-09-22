@@ -1,8 +1,8 @@
 FROM        openjdk:11.0.5-jre-stretch
 MAINTAINER  Grégoire Weber
 
-ENV         MINECRAFT_VERSION 1.16.2
-ENV         MINECRAFT_SERVEUR_URL "https://launcher.mojang.com/v1/objects/c5f6fb23c3876461d46ec380421e42b289789530/server.jar"
+ENV         MINECRAFT_VERSION 1.16.3
+ENV         MINECRAFT_SERVEUR_URL "https://launcher.mojang.com/v1/objects/f02f4473dbf152c23d7d484952121db0b36698cb/server.jar"
 
 VOLUME      /minecraft/data
 WORKDIR     /minecraft
